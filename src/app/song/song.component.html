@@ -1,0 +1,27 @@
+
+<!-- Song list-->
+
+<h2 class="text-center" style="color:rgb(30, 231, 3);"><font face="Comic Sans MS,Arial,Verdana">My Songs</font></h2>
+<div class="row">
+  <div class="col-sm-6">
+  <app-song-detail [song]="selectedSong"></app-song-detail>
+  </div>
+  <div class="col-sm-6 list-group-item">
+
+      <div *ngFor="let song of songs">
+        <div class="d-grid gap-2">
+          <button [class.selected]="song === selectedSong" style="background-color: #1f0255fd;" type="button" class="list-group-item-dark list-group-item-action" (click)="onSelect(song)">
+            <div class="d-flex w-100 justify-content-between">
+            <h6 class="mb-1" style="color:rgb(30, 231, 3);"><font face="Comic Sans MS,Arial,Verdana">{{song.name}}</font></h6>
+            <small style="color:rgb(30, 231, 3);"><font face="Comic Sans MS,Arial,Verdana">{{song.time}}</font></small>
+            </div>
+            <div>
+              <small style="color:rgb(30, 231, 3);"><font face="Comic Sans MS,Arial,Verdana">{{song.artist}}</font></small>
+            </div>
+          </button>
+        </div>
+      </div>
+
+  </div>
+</div>
+

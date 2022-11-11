@@ -1,0 +1,52 @@
+
+
+.vertical-nav {
+    min-width: 17rem;
+    width: 17rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 20px 20px 20px rgba(0, 26, 255, 0.1);
+    transition: all 0.4s;
+     background-color:#dbf0fe;
+  }
+
+  .page-content {
+    width: calc(100% - 17rem);
+    margin-left: 17rem;
+    transition: all 0.4s;
+
+    background-color:#f8f8f8;
+  }
+
+  /* for toggle behavior */
+
+  #sidebar.active {
+    margin-left: -17rem;
+    background-color:#dbf0fe;
+  }
+
+  #content.active {
+    width: 100%;
+    margin: 0;
+    background-color:#dbf0fe;
+  }
+
+
+  @media (max-width: 768px) {
+    #sidebar {
+      margin-left: -17rem;
+    }
+    #sidebar.active {
+      margin-left: 0;
+    }
+    #content {
+      width: 100%;
+      margin: 0;
+    }
+    #content.active {
+      margin-left: 17rem;
+      width: calc(100% - 17rem);
+    }
+  }
